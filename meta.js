@@ -54,6 +54,11 @@ module.exports = {
       "message": "Pick an ESLint preset",
       "choices": [
         {
+          "name": "Neonblack (https://www.npmjs.com/package/eslint-config-neonblack)",
+          "value": "neonblack",
+          "short": "Neonblack"
+        },
+        {
           "name": "Standard (https://github.com/feross/standard)",
           "value": "standard",
           "short": "Standard"

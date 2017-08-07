@@ -9,6 +9,9 @@ module.exports = {
   env: {
     browser: true,
   },
+  {{#if_eq lintConfig "neonblack"}}
+  extends: 'neonblack',
+  {{/if_eq}}
   {{#if_eq lintConfig "standard"}}
   // https://github.com/feross/standard/blob/master/RULES.md#javascript-standard-style
   extends: 'standard',
@@ -30,6 +33,17 @@ module.exports = {
     }
   },
   {{/if_eq}}
+  {{#if_eq lintConfig "neonblack"}}
+  // check if imports actually resolve
+  'settings': {
+    'import/resolver': {
+      'webpack': {
+        'config': 'build/webpack.base.conf.js'
+      }
+    }
+  },
+  {{/if_eq}}
+  {{^if_eq lintConfig "neonblack"}}
   // add your custom rules here
   'rules': {
     {{#if_eq lintConfig "standard"}}
@@ -52,4 +66,5 @@ module.exports = {
     // allow debugger during development
     'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0
   }
+  {{/if_eq}}
 }
