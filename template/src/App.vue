@@ -35,14 +35,11 @@ export default {
   {{/bootstrap}}
   {{#bootstrap}}
   // Core variables and mixins
+  @import "../node_modules/bootstrap/scss/functions";
   @import "scss/bootstrap/variables";
   @import "../node_modules/bootstrap/scss/mixins";
-
-  // Reset and dependencies
-  @import "../node_modules/bootstrap/scss/normalize";
+  @import "../node_modules/bootstrap/scss/root";
   @import "../node_modules/bootstrap/scss/print";
-
-  // Core CSS
   @import "../node_modules/bootstrap/scss/reboot";
   @import "../node_modules/bootstrap/scss/type";
   @import "../node_modules/bootstrap/scss/images";
@@ -51,8 +48,6 @@ export default {
   @import "../node_modules/bootstrap/scss/tables";
   @import "../node_modules/bootstrap/scss/forms";
   @import "../node_modules/bootstrap/scss/buttons";
-
-  // Components
   @import "../node_modules/bootstrap/scss/transitions";
   @import "../node_modules/bootstrap/scss/dropdown";
   @import "../node_modules/bootstrap/scss/button-group";
@@ -69,16 +64,11 @@ export default {
   @import "../node_modules/bootstrap/scss/progress";
   @import "../node_modules/bootstrap/scss/media";
   @import "../node_modules/bootstrap/scss/list-group";
-  @import "../node_modules/bootstrap/scss/responsive-embed";
   @import "../node_modules/bootstrap/scss/close";
-
-  // Components w/ JavaScript
   @import "../node_modules/bootstrap/scss/modal";
   @import "../node_modules/bootstrap/scss/tooltip";
   @import "../node_modules/bootstrap/scss/popover";
   @import "../node_modules/bootstrap/scss/carousel";
-
-  // Utility classes
   @import "../node_modules/bootstrap/scss/utilities";
 
   // Contents
