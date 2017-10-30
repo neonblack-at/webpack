@@ -22,7 +22,7 @@ export default {
 }{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 </script>
 
-<style{{#bootstrap}}lang="scss"{{/bootstrap}}>
+<style{{#bootstrap}} lang="scss"{{/bootstrap}}>
   {{^bootstrap}}
   #app {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
