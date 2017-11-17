@@ -59,7 +59,7 @@ module.exports = {
           "short": "Neonblack"
         },
         {
-          "name": "Standard (https://github.com/feross/standard)",
+          "name": "Standard (https://github.com/standard/standard)",
           "value": "standard",
           "short": "Standard"
         },
@@ -77,22 +77,27 @@ module.exports = {
     },
     "unit": {
       "type": "confirm",
-      "message": "Setup unit tests with Karma + Mocha?"
+      "message": "Setup unit tests"
     },
-    "unitBrowser": {
+    "runner": {
       "when": "unit",
       "type": "list",
-      "message": "Pick a Browser for karma unit tests",
+      "message": "Pick a test runner",
       "choices": [
         {
-          "name": "PhantomJS",
-          "value": "phantomjs",
-          "short": "PhantomJS"
+          "name": "Jest",
+          "value": "jest",
+          "short": "jest"
         },
         {
-          "name": "Chrome Headless",
-          "value": "chrome",
-          "short": "Chrome Headless"
+          "name": "Karma and Mocha",
+          "value": "karma",
+          "short": "karma"
+        },
+        {
+          "name": "none (configure it yourself)",
+          "value": "noTest",
+          "short": "noTest"
         }
       ]
     },
@@ -110,7 +115,10 @@ module.exports = {
     ".eslintignore": "lint",
     "config/test.env.js": "unit || e2e",
     "test/unit/**/*": "unit",
-    "build/webpack.test.conf.js": "unit",
+    "test/unit/index.js": "unit && runner === 'karma'",
+    "test/unit/karma.conf.js": "unit && runner === 'karma'",
+    "test/unit/specs/index.js": "unit && runner === 'karma'",
+    "test/unit/setup.js": "unit && runner === 'jest'",
     "test/e2e/**/*": "e2e",
     "src/router/**/*": "router",
     "src/scss/bootstrap/**/*": "bootstrap"
