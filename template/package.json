@@ -27,7 +27,6 @@
     "vue": "^2.5.2"{{#router}},
     "vue-router": "^3.0.1"{{/router}}{{#bootstrap}},
     "bootstrap": "^4.0.0-beta.2"{{/bootstrap}}
-    "vue-router": "^3.0.1"{{/router}}
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
