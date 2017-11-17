@@ -10,7 +10,7 @@ module.exports = {
     browser: true,
   },
   {{#if_eq lintConfig "neonblack"}}
-  extends: 'neonblack',
+  extends: 'neonblack/vue',
   {{/if_eq}}
   {{#if_eq lintConfig "standard"}}
   // https://github.com/standard/standard/blob/master/docs/RULES-en.md
