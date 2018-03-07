@@ -138,6 +138,10 @@ module.exports = {
       type: 'confirm',
       message: 'Setup e2e tests with Nightwatch?',
     },
+    bootstrap: {
+      type: "confirm",
+      message: "Do you want to use Bootstrap?"
+    },
     autoInstall: {
       when: 'isNotTest',
       type: 'list',
