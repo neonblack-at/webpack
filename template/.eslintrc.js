@@ -30,10 +30,12 @@ module.exports = {
   // consider switching to `plugin:vue/strongly-recommended` or `plugin:vue/recommended` for stricter rules.
   extends: ['plugin:vue/essential'],
   {{/if_eq}}
+  {{^if_eq lintConfig "neonblack"}}
   // required to lint *.vue files
   plugins: [
     'vue'
   ],
+  {{/if_eq}}
   {{#if_eq lintConfig "airbnb"}}
   // check if imports actually resolve
   settings: {
@@ -46,10 +48,10 @@ module.exports = {
   {{/if_eq}}
   {{#if_eq lintConfig "neonblack"}}
   // check if imports actually resolve
-  'settings': {
+  settings: {
     'import/resolver': {
-      'webpack': {
-        'config': 'build/webpack.base.conf.js'
+      webpack: {
+        config: 'build/webpack.base.conf.js'
       }
     }
   },
